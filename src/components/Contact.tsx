@@ -10,7 +10,7 @@ export function Contact() {
                 <div className="max-w-xl text-center">
                     <h2 className="font-normal font-serif text-4xl mb-3">{"What's next?"}</h2>
                     <h3 className="font-semibold text-xl mb-3">Get in touch!</h3>
-                    <p className="mb-5">{"Reach out with any questions you may have--<br />I'm always looking for new opportunities."}<br />{"Let's make something great together!"}</p>
+                    <p className="mb-5">{"Reach out with any questions you may have--"}<br />{"I'm always looking for new opportunities."}<br />{"Let's make something great together!"}</p>
                     <Link href='mailto:contactjohnlee@gmail.com?subject=Hello!'>
                         <Button variant="outline" size="lg" className="text-md font-semibold">
                             Say hello!

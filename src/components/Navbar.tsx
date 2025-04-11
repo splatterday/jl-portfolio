@@ -38,7 +38,7 @@ export function Navbar() {
     >
       <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
         <ModeToggle />
-        <span className="font-serif text-2xl">John Lee</span>
+        <span className="font-serif text-2xl md:hidden">John Lee</span>
         <nav className="hidden md:flex">
           <DesktopNav />
         </nav>

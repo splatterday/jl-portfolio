@@ -81,8 +81,7 @@ export default function Experience() {
             className="min-h-screen flex items-center justify-center px-12 sm:px-8 md:pt-18"
             >
             <FadeInOnScroll>
-                <div className="md:w-[1000px] md:max-w-[80%] md:max-h-[50%] m-auto grid md:grid-cols-[200px_1fr] gap-8 items-start">
-                    {/* Employer List */}
+                <div className="md:w-[1000px] md:max-w-[80%] md:min-h-[50%] md:max-h-[60%] m-auto grid md:grid-cols-[200px_1fr] gap-8 items-start">
                     <div className="space-y-2 border-l border-border pl-4">
                         {experience.map((item, index) => (
                         <button
@@ -99,8 +98,7 @@ export default function Experience() {
                         ))}
                     </div>
 
-                    {/* Description */}
-                    <div className="max-w-prose space-y-4 h-[280px] flex flex-col justify-start overflow-y-auto">
+                    <div className="max-w-prose space-y-4 h-full flex flex-col justify-start overflow-y-auto">
                         <AnimatePresence mode="wait">
                         <motion.div
                             key={current.company}
