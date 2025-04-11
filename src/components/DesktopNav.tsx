@@ -10,7 +10,7 @@ export function DesktopNav() {
       <a href="#experience" className="hover:text-primary">02. Experience</a>
       <a href="#projects" className="hover:text-primary">03. Projects</a>
       <a href="#contact" className="hover:text-primary">04. Contact</a>
-      <Link href="/resume.pdf" target="_blank" rel="noopener">
+      <Link href="/jl_resume_2025.pdf" target="_blank" rel="noopener">
         <Button variant="outline" size="sm" className="ml-2 text-xs font-semibold">
           Resume
         </Button>
