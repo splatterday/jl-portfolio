@@ -20,7 +20,7 @@ export function ModeToggle() {
       <Sun className="w-4 h-4 text-muted-foreground" />
       <Switch
         checked={theme === 'dark'}
-        onCheckedChange={(checked: Boolean) => setTheme(checked ? 'dark' : 'light')}
+        onCheckedChange={(checked: boolean) => setTheme(checked ? 'dark' : 'light')}
         aria-label="Toggle dark mode"
       />
       <Moon className="w-4 h-4 text-muted-foreground" />
