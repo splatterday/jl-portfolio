@@ -1,6 +1,6 @@
 export function SkillsTable() {
     return (
-      <section className="w-full md:max-w-3xl mx-auto pt-10 px-6">
+      <section className="w-full sm:max-w-2xl md:max-w-3xl mx-auto pt-10 px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm text-muted-foreground font-mono">
           <div>
             <h3 className="text-sm font-semibold mb-2 text-foreground">Languages</h3>

@@ -78,27 +78,44 @@ export default function Experience() {
     return (
         <section
             id="experience"
-            className="min-h-screen flex items-center justify-center px-12 sm:px-8 md:pt-18"
+            className="min-h-screen flex items-center justify-center pt-18 px-12 sm:px-8 md:pt-18"
             >
             <FadeInOnScroll>
-                <div className="md:w-[1000px] md:max-w-[80%] md:min-h-[50%] md:max-h-[60%] m-auto grid md:grid-cols-[200px_1fr] gap-8 items-start">
-                    <div className="space-y-2 border-l border-border pl-4">
-                        {experience.map((item, index) => (
-                        <button
-                            key={item.company}
-                            className={cn(
-                            'block cursor-pointer text-sm font-mono text-muted-foreground hover:text-foreground transition',
-                            index === selectedIndex &&
-                                'text-primary font-semibold border-l-2 border-primary pl-2'
-                            )}
-                            onClick={() => setSelectedIndex(index)}
-                        >
-                            {item.company}
-                        </button>
-                        ))}
+                <div className=" w-full sm:w-[760px] sm:max-w-[90%] md:w-[1000px] md:max-w-[80%] md:min-h-[50%] md:max-h-[60%] m-auto grid md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-start">
+                    <div className="md:hidden w-full overflow-x-auto">
+                        <div className="flex gap-4 pb-2 border-b border-border mb-4 min-w-max">
+                            {experience.map((item, index) => (
+                                <button
+                                key={item.company}
+                                className={cn(
+                                    'text-sm whitespace-nowrap font-mono text-muted-foreground px-2 py-1',
+                                    index === selectedIndex && 'text-primary font-semibold underline'
+                                )}
+                                onClick={() => setSelectedIndex(index)}
+                                >
+                                {item.company}
+                                </button>
+                            ))}
+                        </div>
                     </div>
-
-                    <div className="max-w-prose space-y-4 h-full flex flex-col justify-start overflow-y-auto">
+                    <div className="hidden md:grid md:grid-cols-[200px_1fr] gap-8 items-start">
+                        <div className="space-y-2 border-l border-border pl-4">
+                            {experience.map((item, index) => (
+                            <button
+                                key={item.company}
+                                className={cn(
+                                'block cursor-pointer text-sm font-mono text-muted-foreground hover:text-foreground transition',
+                                index === selectedIndex &&
+                                    'text-primary font-semibold border-l-2 border-primary pl-2'
+                                )}
+                                onClick={() => setSelectedIndex(index)}
+                            >
+                                {item.company}
+                            </button>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="pl-4 md:pl-0 max-w-prose space-y-4 h-full flex flex-col justify-start overflow-y-auto">
                         <AnimatePresence mode="wait">
                         <motion.div
                             key={current.company}
