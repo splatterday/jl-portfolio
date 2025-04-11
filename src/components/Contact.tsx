@@ -1,11 +1,10 @@
 import FadeInOnScroll from "./FadeInScroll";
 import Link from 'next/link'
 import { Button } from "./ui/button";
-import { Footer } from "./Footer";
 
 export function Contact() {
     return (
-        <section id="contact" className="relative min-h-[100vh] flex items-center justify-center">
+        <section id="contact" className="min-h-[100vh] flex items-center justify-center">
             <FadeInOnScroll>
                 <div className="max-w-xl text-center">
                     <h2 className="font-normal font-serif text-4xl mb-3">{"What's next?"}</h2>
@@ -17,7 +16,6 @@ export function Contact() {
                         </Button>
                     </Link>
                 </div>
-            <Footer />
             </FadeInOnScroll>
         </section>
     );
