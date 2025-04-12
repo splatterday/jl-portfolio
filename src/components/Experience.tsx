@@ -2,9 +2,10 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { cn } from '@/lib/utils'; // if you have a classnames utility
+import { cn } from '@/lib/utils';
 import FadeInOnScroll from './FadeInScroll';
 import { SkillsTable } from './SkillsTable';
+import { ChevronRight } from 'lucide-react';
 
 const experience = [
     {
@@ -78,10 +79,10 @@ export default function Experience() {
     return (
         <section
             id="experience"
-            className="min-h-screen flex items-center justify-center pt-18 px-12 sm:px-8 md:pt-18"
-            >
+            className="min-h-screen flex items-center justify-center pt-18 px-2 sm:px-8 md:px-12 md:pt-18"
+        >
             <FadeInOnScroll>
-                <div className=" w-full sm:w-[760px] sm:max-w-[90%] md:w-[1000px] md:max-w-[80%] md:min-h-[50%] md:max-h-[60%] m-auto grid md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-start">
+                <div className=" w-full md:max-w-[1000px] md:min-h-[50%] md:max-h-[60%] m-auto grid md:grid-cols-[200px_1fr] gap-2 md:gap-4 items-start">
                     <div className="md:hidden w-full overflow-x-auto">
                         <div className="flex gap-4 pb-2 border-b border-border mb-4 min-w-max">
                             {experience.map((item, index) => (
@@ -115,13 +116,13 @@ export default function Experience() {
                             ))}
                         </div>
                     </div>
-                    <div className="pl-4 md:pl-0 max-w-prose space-y-4 h-full flex flex-col justify-start overflow-y-auto">
+                    <div className="pl-4 md:pl-0 mx-auto max-w-prose space-y-4 h-full flex flex-col justify-start overflow-y-auto">
                         <AnimatePresence mode="wait">
                         <motion.div
                             key={current.company}
-                            initial={{ opacity: 0, x: 20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            exit={{ opacity: 0, x: -20 }}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
                             transition={{ duration: 0.3 }}
                             className="space-y-4"
                         >
@@ -135,9 +136,15 @@ export default function Experience() {
                             {current.duration}
                             </p>
 
-                            <ul className="list-disc ml-5 space-y-2 text-sm text-muted-foreground leading-relaxed">
+                            <ul className="list-none ml-5 space-y-2 text-sm text-muted-foreground leading-relaxed">
                             {current.details.map((point, i) => (
-                                <li key={i}>{point}</li>
+                                <li key={i} className="flex items-start gap-2">
+                                    <span
+                                        className="text-muted-foreground mt-1"
+                                        aria-hidden="true"
+                                    >
+                                        <ChevronRight className="w-3 h-3 mt-0.5 font-mono text-muted-foreground" aria-hidden="true" />
+                                        </span>{point}</li>
                             ))}
                             </ul>
 

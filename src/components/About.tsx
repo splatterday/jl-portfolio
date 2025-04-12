@@ -20,22 +20,21 @@ export function About() {
                 </div>
             </FadeInOnScroll>
             <FadeInOnScroll>
-                <article>
+                <article className=" mx-auto max-w-prose space-y-4 text-sm leading-relaxed text-muted-foreground">
                     <h2
                         id="about-heading"
                         className="text-3xl font-serif tracking-tight text-foreground mb-4"
                     >
                         About Me
                     </h2>
-                    <p className="pb-3">
-                        {"I’m a Front-End Engineer and UI Developer with a passion for crafting accessible, scalable, and performant interfaces. "}
-                        {"I’ve led the build and maintenance of robust "}<strong>{"design systems"}</strong> {"that drive consistency and speed across engineering teams."}
-                    </p>
-                    <p className="pb-3">
-                        {"With a background in "}<strong>{"UX research and developer advocacy"}</strong>{", I bridge the gap between design intent and implementation, ensuring products are intuitive and inclusive."}
+                    <p>
+                        {"I've worked as a Senior Front-End Software Engineer for over 5 years—React and TypeScript being my bread and butter. I've built and maintained design systems, advocated for WCAG accessibility across teams, and served as a developer liaison in UX research initiatives. Throughout, I’ve focused on shipping performant, scalable components and user-facing features using modern state management strategies."}
                     </p>
                     <p>
-                        {"Recently, I’ve been deepening my expertise in "}<strong>{"Next.js, server-side rendering"}</strong>{", and "}<strong>{"Tailwind CSS"}</strong>{" — tools that help scale complex, modern web apps."}
+                        {"Before transitioning to startups, I spent several years in publishing and design. I got my start producing ebooks at Penguin Random House, then moved to Hachette Book Group as a Front-End Developer. There, I launched WordPress microsites for authors and imprints, and created custom widgets that empowered editors to tailor their pages without needing to write code."}
+                    </p>
+                    <p>
+                        {"These days, I'm deepening my expertise in Next.js (with a focus on SSR), Tailwind CSS, and modern CI/CD workflows via GitHub Actions and Vercel. I bring with me years of aesthetic sensibility, a user-first mindset, and a desire to build tools that are both beautiful and accessible to all."}
                     </p>
                 </article>
             </FadeInOnScroll>
