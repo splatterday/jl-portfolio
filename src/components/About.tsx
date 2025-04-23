@@ -28,13 +28,16 @@ export function About() {
                         About Me
                     </h2>
                     <p>
-                        {"I've worked as a Senior Front-End Software Engineer for over 5 years—React and TypeScript being my bread and butter. I've built and maintained design systems, advocated for WCAG accessibility across teams, and served as a developer liaison in UX research initiatives. Throughout, I’ve focused on shipping performant, scalable components and user-facing features using modern state management strategies."}
+                        {"I'm a senior front-end engineer focused on building accessible, performant user interfaces with React, TypeScript, and Next.js. I specialize in creating scalable, component-driven design systems using Tailwind CSS, and deploying modern web apps via GitHub Actions and Vercel."}
                     </p>
                     <p>
-                        {"Before transitioning to startups, I spent several years in publishing and design. I got my start producing ebooks at Penguin Random House, then moved to Hachette Book Group as a Front-End Developer. There, I launched WordPress microsites for authors and imprints, and created custom widgets that empowered editors to tailor their pages without needing to write code."}
+                        {"Lately, I've been deepening my understanding of server-side rendering (SSR), state management strategies, and CI/CD workflows—building full feature pipelines from prototype to production."}
                     </p>
                     <p>
-                        {"These days, I'm deepening my expertise in Next.js (with a focus on SSR), Tailwind CSS, and modern CI/CD workflows via GitHub Actions and Vercel. I bring with me years of aesthetic sensibility, a user-first mindset, and a desire to build tools that are both beautiful and accessible to all."}
+                        {"Over the last five years, I’ve worked on teams shipping real-world applications in public health and civic tech. I've served as a design system owner, a WCAG accessibility advocate, and a developer liaison in UX research initiatives. My focus has always been shipping user-facing features that balance technical elegance with human impact."}
+                    </p>
+                    <p>
+                        {"Before entering the startup world, I worked in publishing and design—starting as an ebook producer at Penguin Random House, then launching WordPress microsites and custom editorial tools at Hachette Book Group."}
                     </p>
                 </article>
             </FadeInOnScroll>
