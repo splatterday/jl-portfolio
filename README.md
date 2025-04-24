@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# John Lee – Front-End Engineer Portfolio
 
-## Getting Started
+This portfolio site is built with **Next.js, React, TypeScript, Tailwind CSS**, and includes testing with **Vitest** and CI/CD through **GitHub Actions**.
 
-First, run the development server:
+It's designed not just as a portfolio but as a reflection of how I approach real production work:
+- **Accessible, responsive markup** (ARIA, role attributes, WCAG considerations)
+- **SSR/SSG readiness** using Next.js
+- **Automated testing and deploy pipeline** via GitHub Actions
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+While this is not a "complex app," I treat even simple projects as an opportunity to maintain best practices across the stack.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Technologies
+- [x] React (w/ TypeScript)
+- [x] Next.js (with SSG/SSR support)
+- [x] Tailwind CSS (with custom palette)
+- [x] Shadcn/ui component primitives
+- [x] Vitest + React Testing Library
+- [x] GitHub Actions for CI/CD
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧪 Testing Philosophy
+This project includes basic unit tests for key interactive components (menus, toggle behavior, experience selection).  
+Animations are disabled during tests to ensure reliable assertions.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All tests run automatically in the CI pipeline on **push and pull request to main**.
 
-## Learn More
+> ⚠️ This repo is not intended as a full-featured application. It’s here to represent my approach to maintainability, accessibility, and build hygiene.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔒 CI/CD Status
+![CI](https://github.com/splatterday/jl-portfolio/actions/workflows/test.yml/badge.svg)
