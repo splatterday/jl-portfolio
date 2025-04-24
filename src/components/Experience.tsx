@@ -93,6 +93,7 @@ export default function Experience() {
                                     index === selectedIndex && 'text-primary font-semibold underline'
                                 )}
                                 onClick={() => setSelectedIndex(index)}
+                                aria-label={item.company + '-mobile'}
                                 >
                                 {item.company}
                                 </button>
@@ -110,6 +111,7 @@ export default function Experience() {
                                     'text-primary font-semibold border-l-2 border-primary pl-2'
                                 )}
                                 onClick={() => setSelectedIndex(index)}
+                                aria-label={item.company + '-desktop'}
                             >
                                 {item.company}
                             </button>

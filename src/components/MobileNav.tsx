@@ -8,13 +8,13 @@ export function MobileNav() {
 
   return (
     <div className="md:hidden">
-      <button onClick={() => setOpen(!open)} aria-label="Toggle Menu">
+      <button onClick={() => setOpen(!open)} aria-label="toggle">
         {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </button>
 
       {open && (
         <div className="fixed inset-0 z-40 bg-secondary/90 h-auto min-h-[18rem] px-6 py-8 flex flex-col gap-6 items-center justify-start">
-            <button onClick={() => setOpen(false)} className="absolute top-4 right-4">
+            <button onClick={() => setOpen(false)} className="absolute top-4 right-4" aria-label="close">
             <X className="w-6 h-6" />
             </button>
             <a href="#about" onClick={() => setOpen(false)}>About</a>

@@ -1,0 +1,30 @@
+name: Run Portfolio Tests and Build Check
+
+on: [push, pull_request]  # Triggers on any push or PR to any branch
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true  # Cancels previous runs if you push again quickly
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci  # Fast, clean install for CI pipelines
+
+      - name: Build the app
+        run: npm run build  # Fail early if your app doesn't compile cleanly
+
+      - name: Run tests
+        run: npm test  # Run your Vitest tests

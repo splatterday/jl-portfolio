@@ -7,11 +7,11 @@ import { MobileNav } from './MobileNav'
 test('mobile menu toggles open and closed', async () => {
   render(<MobileNav />)
 
-  const button = screen.getByRole('button', { name: /menu/i })
+  const button = screen.getByLabelText('toggle', { name: /menu/i })
   await userEvent.click(button)
 
   expect(screen.getByText(/projects/i)).toBeInTheDocument()
 
-  await userEvent.click(screen.getByRole('button', { name: /close/i }))
+  await userEvent.click(screen.getByLabelText('close', { name: /close/i }))
   expect(screen.queryByText(/projects/i)).not.toBeInTheDocument()
 })
